@@ -1,7 +1,6 @@
 const express = require('express');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send('./index.html'); 
@@ -11,4 +10,4 @@ app.all('/answer', (req, res) => {
     res.json(req.query); 
 });
 
-app.listen(PORT);
+module.exports = app;
