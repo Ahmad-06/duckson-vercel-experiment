@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     res.send('./index.html'); 
 });
 
-app.get('/answer', (req, res) => {
+app.all('/answer', (req, res) => {
     res.json(req.query); 
 });
 
