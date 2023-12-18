@@ -4,7 +4,7 @@ const njk = require('nunjucks');
 
 const app = express();
 
-njk.configure('./views', {
+njk.configure(path.join(__dirname, 'views'), {
     express: app,
     autoescape: true
 });
